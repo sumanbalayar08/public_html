@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  console.log("Tickets Amount:", electraVars.tickets_amount);
-  console.log("Package Price:", electraVars.package_price);
+  // console.log("Tickets Amount:", electraVars.tickets_amount);
+  // console.log("Package Price:", electraVars.package_price);
 
   const $dropdowns = $(".dropdown-slider");
   const $ticketOptions = $(".ticket-package");
@@ -66,11 +66,18 @@ $(document).ready(function () {
 
       expandStep(2, "basic");
 
+      const basicTotalTickets = $(
+        ".f1-ticket-options[basic-total-tickets]"
+      ).attr("basic-total-tickets");
+      console.log(`Basic Package Total Tickets: ${basicTotalTickets}`);
+
       const $increase = $step2.find("#increase");
       const $decrease = $step2.find("#decrease");
       const $ticketAmt = $step2.find(".tickets-amount");
       const $f1price = $step2.find(".f1-package-price");
       const initialPrice = parseFloat($f1price.text().replace("£", ""));
+
+      let ticketCount = parseInt($ticketAmt.text());
 
       function updateTicketPrice($ticketAmt, $f1price, initialPrice) {
         const ticketCount = parseInt($ticketAmt.text());
@@ -78,13 +85,14 @@ $(document).ready(function () {
       }
 
       $increase.off("click").on("click", function () {
-        const ticketCount = parseInt($ticketAmt.text()) + 1;
-        $ticketAmt.text(ticketCount);
-        updateTicketPrice($ticketAmt, $f1price, initialPrice);
+        if (ticketCount < basicTotalTickets) {
+          ticketCount++; // Increase ticket count
+          $ticketAmt.text(ticketCount); // Update displayed ticket count
+          updateTicketPrice($ticketAmt, $f1price, initialPrice); // Update price
+        }
       });
 
       $decrease.off("click").on("click", function () {
-        let ticketCount = parseInt($ticketAmt.text());
         if (ticketCount > 1) {
           ticketCount--;
           $ticketAmt.text(ticketCount);
@@ -136,6 +144,11 @@ $(document).ready(function () {
       const $step2 = $('[data-step="2"][data-package="vip"]');
       const $step2Button = $step2.find(".add-to-cart");
 
+      const vipTotalTickets = $(".f1-ticket-options[vip-total-tickets]").attr(
+        "vip-total-tickets"
+      );
+      console.log(`VIP Package Total Tickets: ${vipTotalTickets}`);
+
       const $increase = $step2.find("#increase");
       const $decrease = $step2.find("#decrease");
       const $ticketAmt = $step2.find(".tickets-amount");
@@ -150,9 +163,11 @@ $(document).ready(function () {
 
       // Increase button functionality
       $increase.off("click").on("click", function () {
-        ticketCount++;
-        $ticketAmt.text(ticketCount);
-        updateVipPrice(); // Update price after increasing
+        if (ticketCount < vipTotalTickets) {
+          ticketCount++;
+          $ticketAmt.text(ticketCount);
+          updateVipPrice(); // Update price after increasing
+        }
       });
 
       // Decrease button functionality

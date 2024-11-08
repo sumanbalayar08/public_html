@@ -442,13 +442,13 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
 
                     <h3>Please Enter Payment Details</h3>
 
-                    <div class="payment-options">
+                    <!-- <div class="payment-options">
                         <input type="radio" id="credit-card" name="payment-method" checked>
                         <label for="credit-card">Credit/Debit Card</label>
 
                         <input type="radio" id="paypal" name="payment-method">
                         <label for="paypal">PayPal</label>
-                    </div>
+                    </div> -->
 
                     <div class="form-row" id="credit-card-details">
                         <div class="input-group">
