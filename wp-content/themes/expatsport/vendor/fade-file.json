@@ -1,0 +1,138 @@
+[{
+  "version": "1.0",
+  "image": {
+    "name": "/home/videosdownloader/public_html/image/public/uploadt/circles-svg-differ-color.svg",
+    "baseName": "circles-svg-differ-color.svg",
+    "format": "SVG",
+    "formatDescription": "SVG",
+    "mimeType": "image/svg+xml",
+    "class": "DirectClass",
+    "geometry": {
+      "width": 496,
+      "height": 594,
+      "x": 0,
+      "y": 0
+    },
+    "units": "Undefined",
+    "type": "Bilevel",
+    "baseType": "Undefined",
+    "endianness": "Undefined",
+    "colorspace": "sRGB",
+    "depth": 1,
+    "baseDepth": 16,
+    "channelDepth": {
+      "alpha": 1,
+      "red": 1,
+      "green": 1,
+      "blue": 1
+    },
+    "pixels": 1178496,
+    "imageStatistics": {
+      "Overall": {
+        "min": 65535,
+        "max": 65535,
+        "mean": 65535,
+        "median": 65535,
+        "standardDeviation": 0,
+        "kurtosis": 8.192e+51,
+        "skewness": 1e+36,
+        "entropy": 0
+      }
+    },
+    "channelStatistics": {
+      "alpha": {
+        "min": 65535,
+        "max": 65535,
+        "mean": 65535,
+        "median": 65535,
+        "standardDeviation": 0,
+        "kurtosis": 8.192e+51,
+        "skewness": 1e+36,
+        "entropy": 0
+      },
+      "red": {
+        "min": 65535,
+        "max": 65535,
+        "mean": 65535,
+        "median": 65535,
+        "standardDeviation": 0,
+        "kurtosis": 8.192e+51,
+        "skewness": 1e+36,
+        "entropy": 0
+      },
+      "green": {
+        "min": 65535,
+        "max": 65535,
+        "mean": 65535,
+        "median": 65535,
+        "standardDeviation": 0,
+        "kurtosis": 8.192e+51,
+        "skewness": 1e+36,
+        "entropy": 0
+      },
+      "blue": {
+        "min": 65535,
+        "max": 65535,
+        "mean": 65535,
+        "median": 65535,
+        "standardDeviation": 0,
+        "kurtosis": 8.192e+51,
+        "skewness": 1e+36,
+        "entropy": 0
+      }
+    },
+    "renderingIntent": "Perceptual",
+    "gamma": 0.454545,
+    "chromaticity": {
+      "redPrimary": {
+        "x": 0.64,
+        "y": 0.33
+      },
+      "greenPrimary": {
+        "x": 0.3,
+        "y": 0.6
+      },
+      "bluePrimary": {
+        "x": 0.15,
+        "y": 0.06
+      },
+      "whitePrimary": {
+        "x": 0.3127,
+        "y": 0.329
+      }
+    },
+    "matteColor": "#BDBDBD",
+    "backgroundColor": "#FFFFFF",
+    "borderColor": "#DFDFDF",
+    "transparentColor": "#00000000",
+    "interlace": "None",
+    "intensity": "Undefined",
+    "compose": "Over",
+    "pageGeometry": {
+      "width": 496,
+      "height": 594,
+      "x": 0,
+      "y": 0
+    },
+    "dispose": "Undefined",
+    "iterations": 0,
+    "compression": "Undefined",
+    "orientation": "Undefined",
+    "properties": {
+      "date:create": "2024-08-03T07:21:44+00:00",
+      "date:modify": "2024-08-03T07:21:44+00:00",
+      "signature": "995fb14e8cddd199102521596dab6157581ca37dfcba46d6ab9418e55520acab",
+      "svg:comment": " Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  "
+    },
+    "artifacts": {
+      "mvg:vector-graphics": "push graphic-context \"Layer_1\"\ncompliance \"SVG\"\nfill \"black\"\nfill-opacity 1\nstroke \"none\"\nstroke-width 1\nstroke-opacity 1\nfill-rule nonzero\nencoding \"utf-8\"\nviewbox 0 0 496 594\naffine 1 0 0 1 0 0\npush class \"st0\"\nfill-rule \"evenodd\"\nclip-rule \"evenodd\"\nfill \"#ffffff\"\npop class\npush class \"st1\"\nfill \"#ffffff\"\npop class\npush class \"st2\"\nfill \"#ffffff\"\npop class\npush graphic-context \"Layer_x0020_1\"\npush graphic-context \"_6WW\"\npush graphic-context\nclass \"st0\"\npath \"M46.4,520.3c0-12.8-10.4-23.2-23.2-23.2C10.4,497.1,0,507.4,0,520.3c0,12.8,10.4,23.2,23.2,23.2    C36,543.5,46.4,533.1,46.4,520.3z M46.4,40.5c0-12.8-10.4-23.2-23.2-23.2C10.4,17.2,0,27.6,0,40.5c0,12.8,10.4,23.2,23.2,23.2    C36,63.7,46.4,53.3,46.4,40.5z M132.7,128.1c0-12.8-10.4-23.2-23.2-23.2c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2    C122.3,151.3,132.7,140.9,132.7,128.1z M217.6,200.8c0-12.8-10.4-23.2-23.2-23.2c-12.8,0-23.2,10.4-23.2,23.2    c0,12.8,10.4,23.2,23.2,23.2C207.2,224.1,217.6,213.7,217.6,200.8z M303.9,288.4c0-12.8-10.4-23.2-23.2-23.2    c-12.8,0-23.2,10.4-23.2,23.2c0,12.8,10.4,23.2,23.2,23.2C293.5,311.7,303.9,301.3,303.9,288.4z M171.2,359.9    c0,12.8,10.4,23.2,23.2,23.2c12.8,0,23.2-10.4,23.2-23.2c0-12.8-10.4-23.2-23.2-23.2C181.6,336.7,171.2,347.1,171.2,359.9z     M86.3,447.5c0,12.8,10.4,23.2,23.2,23.2c12.8,0,23.2-10.4,23.2-23.2c0-12.8-10.4-23.2-23.2-23.2    C96.6,424.3,86.3,434.7,86.3,447.5z\"\npop graphic-context\npush graphic-context\nclass \"st1\"\npath \"M234.8,40.4c0,22.3-18.1,40.4-40.4,40.4c-22.3,0-40.4-18.1-40.4-40.4C153.9,18.1,172,0,194.4,0    C216.7,0,234.8,18.1,234.8,40.4z\"\npop graphic-context\npush graphic-context\nclass \"st1\"\npath \"M234.8,520.3c0,22.3-18.1,40.4-40.4,40.4c-22.3,0-40.4-18.1-40.4-40.4c0-22.3,18.1-40.4,40.4-40.4    C216.7,479.8,234.8,497.9,234.8,520.3z\"\npop graphic-context\npush graphic-context\nclass \"st1\"\npath \"M321.1,447.5c0,22.3-18.1,40.4-40.4,40.4c-22.3,0-40.4-18.1-40.4-40.4c0-22.3,18.1-40.4,40.4-40.4    C303,407.1,321.1,425.2,321.1,447.5z\"\npop graphic-context\npush graphic-context\nclass \"st1\"\npath \"M492.2,288.4c0,22.3-18.1,40.4-40.4,40.4c-22.3,0-40.4-18.1-40.4-40.4c0-22.3,18.1-40.4,40.4-40.4    C474.1,248,492.2,266.1,492.2,288.4z\"\npop graphic-context\npush graphic-context\nclass \"st1\"\npath \"M406,200.8c0,22.3-18.1,40.4-40.4,40.4c-22.3,0-40.4-18.1-40.4-40.4c0-22.3,18.1-40.4,40.4-40.4    C387.9,160.4,406,178.5,406,200.8z\"\npop graphic-context\npush graphic-context\nclass \"st1\"\npath \"M406,359.9c0,22.3-18.1,40.4-40.4,40.4c-22.3,0-40.4-18.1-40.4-40.4c0-22.3,18.1-40.4,40.4-40.4    C387.9,319.4,406,337.6,406,359.9z\"\npop graphic-context\npush graphic-context\nclass \"st1\"\npath \"M321.1,128.1c0,22.3-18.1,40.4-40.4,40.4c-22.3,0-40.4-18.1-40.4-40.4c0-22.3,18.1-40.4,40.4-40.4    C303,87.6,321.1,105.7,321.1,128.1z\"\npop graphic-context\npush graphic-context\nclass \"st2\"\npath \"M144.7,289.8c0,17.9-14.5,32.4-32.4,32.4S80,307.6,80,289.8c0-17.9,14.5-32.3,32.3-32.3    S144.7,271.9,144.7,289.8z\"\npop graphic-context\npop graphic-context\npop graphic-context\npop graphic-context\n"
+    },
+    "tainted": false,
+    "filesize": "2987B",
+    "numberPixels": "294624",
+    "pixelsPerSecond": "4290080B",
+    "userTime": "0.090u",
+    "elapsedTime": "0:01.068",
+    "version": "ImageMagick 7.0.10-58 Q16 x86_64 2021-01-14 https://imagemagick.org"
+  }
+}]

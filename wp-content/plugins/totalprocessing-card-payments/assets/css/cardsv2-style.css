@@ -1,0 +1,55 @@
+#cnpFrame {width: 100%; border: none;}#cnpSwal {margin-bottom: 0.3rem; margin-top: 1rem;}#cnpNav {display: flex; align-items: center; justify-content: center;}#cnpNav button {font-size: small; margin: 5px; border-radius: 0.25em; font-weight: lighter;}
+#tpcpv3_inline-loading{display:flex; align-items: center; justify-content: center;}
+.dot-bricks {
+  position: relative;
+  top: 8px;
+  left: -9999px;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background-color: #BDBDBD;
+  color: #BDBDBD;
+  box-shadow: 9991px -16px 0 0 #BDBDBD, 9991px 0 0 0 #BDBDBD, 10007px 0 0 0 #BDBDBD;
+  animation: dot-bricks 2s infinite ease;
+}
+@keyframes dot-bricks {
+  0% {
+    box-shadow: 9991px -16px 0 0 #BDBDBD, 9991px 0 0 0 #BDBDBD, 10007px 0 0 0 #BDBDBD;
+  }
+  8.333% {
+    box-shadow: 10007px -16px 0 0 #BDBDBD, 9991px 0 0 0 #BDBDBD, 10007px 0 0 0 #BDBDBD;
+  }
+  16.667% {
+    box-shadow: 10007px -16px 0 0 #BDBDBD, 9991px -16px 0 0 #BDBDBD, 10007px 0 0 0 #BDBDBD;
+  }
+  25% {
+    box-shadow: 10007px -16px 0 0 #BDBDBD, 9991px -16px 0 0 #BDBDBD, 9991px 0 0 0 #BDBDBD;
+  }
+  33.333% {
+    box-shadow: 10007px 0 0 0 #BDBDBD, 9991px -16px 0 0 #BDBDBD, 9991px 0 0 0 #BDBDBD;
+  }
+  41.667% {
+    box-shadow: 10007px 0 0 0 #BDBDBD, 10007px -16px 0 0 #BDBDBD, 9991px 0 0 0 #BDBDBD;
+  }
+  50% {
+    box-shadow: 10007px 0 0 0 #BDBDBD, 10007px -16px 0 0 #BDBDBD, 9991px -16px 0 0 #BDBDBD;
+  }
+  58.333% {
+    box-shadow: 9991px 0 0 0 #BDBDBD, 10007px -16px 0 0 #BDBDBD, 9991px -16px 0 0 #BDBDBD;
+  }
+  66.666% {
+    box-shadow: 9991px 0 0 0 #BDBDBD, 10007px 0 0 0 #BDBDBD, 9991px -16px 0 0 #BDBDBD;
+  }
+  75% {
+    box-shadow: 9991px 0 0 0 #BDBDBD, 10007px 0 0 0 #BDBDBD, 10007px -16px 0 0 #BDBDBD;
+  }
+  83.333% {
+    box-shadow: 9991px -16px 0 0 #BDBDBD, 10007px 0 0 0 #BDBDBD, 10007px -16px 0 0 #BDBDBD;
+  }
+  91.667% {
+    box-shadow: 9991px -16px 0 0 #BDBDBD, 9991px 0 0 0 #BDBDBD, 10007px -16px 0 0 #BDBDBD;
+  }
+  100% {
+    box-shadow: 9991px -16px 0 0 #BDBDBD, 9991px 0 0 0 #BDBDBD, 10007px 0 0 0 #BDBDBD;
+  }
+}

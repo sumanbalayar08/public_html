@@ -1,0 +1,607 @@
+/* F1 Single Page Design */
+body, html {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+} 
+
+.f1-ticket-selection__container {
+    background-color: white;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-right: 6.25rem;
+    padding-left: 6.25rem;
+    padding-bottom: 6.25rem;
+    padding-top: 13.25rem;
+}
+
+.f1-ticket-options{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (max-width:768px) {
+    .f1-ticket-options{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.f1-ticket-options img{
+width: 250%;
+height: 250%;
+}
+
+.f1-ticket-desc{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.f1-ticket-desc span{
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+@media (max-width:768px) {
+    .f1-ticket-desc span{
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+}
+
+.f1_race_track_comp{
+    display: flex;
+    gap: 10px;
+}
+
+.f1_event_specs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 80%;
+}
+
+.dropdown-slider-tab {
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 15, 82);
+    justify-content: space-between;
+    color: white;
+    border-radius: 2px;
+    padding: 4px 6px;
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#dropdown-step {
+    color: orange;
+}
+
+.collapsible-container {
+    height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    border: none;
+    border-radius: 2px;
+    padding: 0 6px;
+}
+
+.collapsible-container.expanding {
+    height: auto;
+    padding: 4px 6px;
+}
+
+.dropdown-slider-tab .icon {
+    transition: transform 0.3s;
+}
+
+.dropdown-slider-tab .icon.active {
+    transform: rotate(180deg);
+}
+
+.modal {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.modal-step-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+}
+
+.modal-header h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.tab-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #eee;
+    padding: 10px;
+}
+
+.close-btn {
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.tab {
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+}
+
+.tab.f1-ratings {
+    color: red;
+}
+
+.icon {
+    margin-right: 5px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+
+.info-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.info-tab {
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    background-color: #f4f4f4;
+    padding: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.price-select {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+.price-select h2 {
+    margin: 0;
+    font-size: 18px;
+    flex: 2;
+}
+
+.price-select h3 {
+    margin: 0;
+    font-size: 18px;
+    flex: 1;
+    text-align: right;
+    color: #333;
+}
+
+.qty-controls {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+}
+
+.qty-btn {
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #b80000;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticket-package{
+    cursor: pointer;
+    background-color: orange;
+    color: white;
+    font-weight: 800;
+    font-size: larger;
+    border-radius: 4px;
+}
+
+.tickets-amount {
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.add-to-cart {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+.additional-package-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.package-groups {
+    display: flex;
+    gap: 10px;
+    padding: 5px 10px;
+    justify-content: center;
+}
+
+.package-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 2px;
+    border-radius: 8px;
+}
+
+.package-detail img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.package-detail h2,
+.package-detail h5,
+.package-detail p {
+    margin: 4px 0;
+    /* Adds space between the elements */
+}
+
+.concert {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.eminem {
+    font-size: 30px;
+}
+
+.image-2{
+    text-align: center;
+}
+.concert-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.concert-title {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.how-to-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-steps-heading {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.product-steps {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.product-help-circle {
+    background-color: rgba(219, 219, 219, 0.829);
+    border-radius: 100px;
+    padding: 30px;
+}
+
+.product-help-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+}
+
+.product-help-circle.active {
+    background-color: red;
+}
+
+.product-step-heading {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: larger;
+
+}
+
+.product-step-desc {
+    font-size: small;
+    color: rgba(100, 100, 100, 0.829);
+    text-align: center;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    padding-left: 20px;
+    border-radius: 8px;
+}
+
+.quote-sub-container {
+    display: flex;
+    gap: 10px;
+    align-items: start;
+    justify-content: start;
+}
+
+.quote-form {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.quote-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.quote-form input,
+.quote-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.quote-form button {
+    padding: 10px 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.quote-info {
+    flex: 1;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.quote-info h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.quote-info p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.quote-info .callback-btn {
+    padding: 10px 15px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: start;
+}
+
+.success-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 150px auto;
+    gap: 30px;
+}
+
+.order-text {
+    overflow-wrap: break-word;
+    /* Forces text to wrap */
+    /* Adjust the width as needed */
+    text-align: center;
+}
+
+.checkmark {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 1.5;
+    stroke: #4bb71b;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #4bb71b;
+    animation: fill 1s ease-in-out 1s forwards, scale 1s ease-in-out 1.5s both;
+    position: relative;
+    top: 5px;
+    right: 5px;
+    margin: 0 auto;
+}
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #4bb71b;
+    fill: #fff;
+    animation: stroke 1.2s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) 1.4s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%,
+    100% {
+        transform: none;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #4bb71b;
+    }
+}
+
+
+.checkout-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.input-group.full-width {
+    flex: 1 0 100%;
+}
+
+.privacy-policy, .terms-check {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.payment-options {
+    margin-bottom: 20px;
+}
+
+.payment-options input {
+    margin-right: 10px;
+}
+
+.payment-options label {
+    font-size: 1rem;
+    margin-right: 20px;
+}
+
+.payment-btn {
+    background-color: #ffcc00;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.payment-btn:hover {
+    background-color: #e6b800;
+}
+
+.payment-icons img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.hidden {
+    display: none;
+}
