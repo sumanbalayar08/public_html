@@ -6,56 +6,39 @@ global $post;
 if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
     $basic_packages = get_field('f1_basic_package_types');
     $premium_packages = get_field('f1_premium_package_types');
+
+    $f1_intro_images = get_field(selector: 'f1_intro_images');
     ?>
 
     <div class="f1-ticket-selection__container">
         <div class="dropdown-slider">
             <div class="dropdown-slider-tab">
                 <div class="dropdown-slider-title"><span id="dropdown-step">STEP 1:</span> SEAT TICKET</div>
-                <span class="icon">&#9660;</span>
+                <img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/dropdown.png" width="20">
             </div>
             <div class="collapsible-container expanding">
                 <div class="modal-step-1">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/car.png">
-                    <div class="f1_race_track_comp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/race_track.png">
-                        <div class="col experience-each">
-                            <div class="experience-each__content b-radius">
-                                <div class="experience-each__conten__cat primary-bg">Formula 1</div>
-                                <div class="experience-each__content__img">
-                                    <div class="image-fill">
-                                        <img
-                                            src="<?php echo get_template_directory_uri(); ?>/assets/images/experience1.png">
-                                    </div>
-                                </div>
-                                <div class="experience-each__content__text">
-                                    <div class="experience-each__content__title Fira-Bold mb-2">
-                                        ILT2O
-                                    </div>
-                                    <div class="experience-each__content__location d-flex align-items-center mb-2">
-                                        <div class="col-1">
-                                            <div class="">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/pin.png"
-                                                    width="12">
-                                            </div>
-                                        </div>
-                                        <div class="col-11">Dubai, Sharjah, UAE </div>
-                                    </div>
-                                    <div class="experience-each__content__date d-flex align-items-center mb-2">
-                                        <div class="col-1">
-                                            <div class="">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/calendar.png"
-                                                    width="16">
-                                            </div>
-                                        </div>
-                                        <div class="col-11">19 Jan - 17 Feb, 2024 </div>
-                                    </div>
-                                    <div class="experience-each__content__btn btn-sec text-center">
-                                        Buy Now
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="f1_intro_images">
+                        <?php if (have_rows('f1_intro_images')): ?>
+                            <?php while (have_rows('f1_intro_images')):
+                                the_row(); ?>
+                                <?php
+                                $f1_intro_image_1 = get_sub_field('f1_intro_image_1');
+                                if ($f1_intro_image_1): ?>
+                                    <img src="<?php echo esc_url($f1_intro_image_1['url']); ?>" width="100"
+                                        alt="<?php echo esc_attr($f1_intro_image_1['alt']); ?>">
+                                <?php endif; ?>
+
+                                <?php
+                                $f1_intro_image_2 = get_sub_field('f1_intro_image_2');
+                                if ($f1_intro_image_2): ?>
+                                    <img src="<?php echo esc_url($f1_intro_image_2['url']); ?>" width="100"
+                                        alt="<?php echo esc_attr($f1_intro_image_1['alt']); ?>">
+                                <?php endif; ?>
+                            <?php endwhile; ?>
+                        <?php else: ?>
+                            <p>No image available.</p>
+                        <?php endif; ?>
                     </div>
 
 
@@ -70,7 +53,8 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
                                         <?php the_sub_field('f1_package_title'); ?>
                                     </span>
                                     <p><?php the_sub_field('f1_package_description'); ?></p>
-                                    Total Tickets: <?php the_sub_field('f1_basic_package_total_tickets'); ?>
+                                    <p id="total-tickets">Total Tickets: <?php the_sub_field('f1_basic_package_total_tickets'); ?>
+                                    </p>
                                     <button class="ticket-package" data-package="basic">Discover More</button>
                                 </div>
                                 <?php
@@ -101,7 +85,7 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
                                         <?php the_sub_field('f1_package_title'); ?>
                                     </span>
                                     <p><?php the_sub_field('f1_package_description'); ?></p>
-                                    Total Tickets: <?php the_sub_field('f1_vip_package_total_tickets'); ?>
+                                    <p id="total-tickets">Total Tickets: <?php the_sub_field('f1_vip_package_total_tickets'); ?></p>
 
                                     <button class="ticket-package" data-package="vip">Discover More</button>
                                 </div>
@@ -122,7 +106,7 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
                     <div class="dropdown-slider-tab">
                         <div class="dropdown-slider-title"><span id="dropdown-step">STEP 2:</span> CRAFT YOUR PERFECT EXPERIENCE
                         </div>
-                        <span class="icon">&#9660;</span>
+                        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/dropdown.png" width="20">
                     </div>
                     <div class="collapsible-container">
                         <div class="modal">
@@ -215,14 +199,13 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
                             <div class="concert-details">
                                 <div class="concert-title">Included in Your Experience</div>
                                 <div class="concert">
-                                    <img src="/edsheeran.png" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/edsheeran.png">
                                     <h4 class="eminem">Eminem <br />Concert</h4>
                                 </div>
 
                                 <div class="concert">
                                     <h4 class="eminem">Yas Island <br />Theme Park</h4>
-                                    <img src="/drinking and enjoying.png" />
-
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/yas-island.jpg">
                                 </div>
                             </div>
 
@@ -242,7 +225,7 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
                     <div class="dropdown-slider-tab">
                         <div class="dropdown-slider-title"><span id="dropdown-step">STEP 2:</span> PERSONALISE YOUR
                             ACCOMMODATION</div>
-                        <span class="icon">&#9660;</span>
+                        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/dropdown.png" width="20">
                     </div>
                     <div class="collapsible-container">
                         <div class="modal">
@@ -298,7 +281,10 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
                                 </div>
                                 <div class="product-steps">
                                     <div class="product-step">
-                                        <div class="product-help-circle">dfd</div>
+                                        <div class="product-help-circle">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/calendar1.png"
+                                                width="30">
+                                        </div>
                                         <div class="product-help-desc">
                                             <span class="product-step-heading">Step 1</span>
                                             <span class="product-step-desc">Select Your Dates</span>
@@ -306,21 +292,30 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
 
                                     </div>
                                     <div class="product-step">
-                                        <div class="product-help-circle">dfd</div>
+                                        <div class="product-help-circle">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hotel.png"
+                                                width="30">
+                                        </div>
                                         <div class="product-help-desc">
                                             <span class="product-step-heading">Step 2</span>
                                             <span class="product-step-desc">Choose Your Hotel </span>
                                         </div>
                                     </div>
                                     <div class="product-step">
-                                        <div class="product-help-circle">dfd</div>
+                                        <div class="product-help-circle">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ticket.png"
+                                                width="30">
+                                        </div>
                                         <div class="product-help-desc">
                                             <span class="product-step-heading">Step 3</span>
                                             <span class="product-step-desc">Pick your Ticket Category</span>
                                         </div>
                                     </div>
                                     <div class="product-step">
-                                        <div class="product-help-circle">dfd</div>
+                                        <div class="product-help-circle">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/coconuttree.png"
+                                                width="30">
+                                        </div>
                                         <div class="product-help-desc">
                                             <span class="product-step-heading">Step 4</span>
                                             <span class="product-step-desc">Arrive on Yas Island for Ultimate UFC
@@ -352,7 +347,7 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
                                 </div>
                             </div>
 
-                            <div class="quote-container">
+                            <!-- <div class="quote-container">
                                 <h2>Request a quote</h2>
                                 <div class="quote-sub-container">
                                     <div class="quote-form">
@@ -376,6 +371,33 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
                                         <button class="callback-btn">CALL ME BACK</button>
                                     </div>
                                 </div>
+                            </div> -->
+                            <div class="quote-container">
+                                <p class="quote-container-title">Request a quote</p>
+                                <form id="quoteRequestForm">
+                                    <div class="quote-sub-container">
+                                        <div class="quote-form">
+                                            <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                                            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                                            <input type="email" id="email" name="email" placeholder="Email" required>
+                                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                                            <textarea id="message" name="message" placeholder="Your message" rows="4"
+                                                required></textarea>
+                                        </div>
+                                        <div class="quote-info">
+                                            <h3>Call me back</h3>
+                                            <p>Our specialists are here to help! Get in touch with our team of experts who
+                                                are ready
+                                                to assist
+                                                you in
+                                                finding the best solution for your needs.</p>
+                                            <p><strong>Mon - Fri: 9:00 AM - 5:00 PM PST</strong><br>+1 123 456 7890</p>
+                                            <button class="callback-btn">CALL ME BACK</button>
+                                        </div>
+                                    </div>
+                                    <button type="submit">Submit</button>
+                                </form>
+
                             </div>
                         </div>
                     </div>
@@ -388,7 +410,7 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
         <div class="dropdown-slider hidden" data-step="3" data-package="basic">
             <div class="dropdown-slider-tab">
                 <div class="dropdown-slider-title"><span id="dropdown-step">STEP 3:</span> PAYMENT OPTION</div>
-                <span class="icon">&#9660;</span>
+                <img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/dropdown.png" width="20">
             </div>
             <div class="collapsible-container">
                 <div class="checkout-container">
@@ -495,7 +517,7 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
         <div class="dropdown-slider hidden" data-step="4" data-package="basic">
             <div class="dropdown-slider-tab">
                 <div class="dropdown-slider-title"><span id="dropdown-step">STEP 4:</span> ORDER SUCCESS</div>
-                <span class="icon">&#9660;</span>
+                <img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/dropdown.png" width="20">
             </div>
             <div class="collapsible-container">
                 <div class="success-animation">
