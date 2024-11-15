@@ -199,7 +199,7 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
                             <div class="concert-details">
                                 <div class="concert-title">Included in Your Experience</div>
                                 <div class="concert">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/edsheeran.png">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/edsheeran.png">
                                     <h4 class="eminem">Eminem <br />Concert</h4>
                                 </div>
 
@@ -282,8 +282,7 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
                                 <div class="product-steps">
                                     <div class="product-step">
                                         <div class="product-help-circle">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/calendar1.png"
-                                                width="30">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/calendar1.png" width="30">
                                         </div>
                                         <div class="product-help-desc">
                                             <span class="product-step-heading">Step 1</span>
@@ -293,8 +292,7 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
                                     </div>
                                     <div class="product-step">
                                         <div class="product-help-circle">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hotel.png"
-                                                width="30">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/hotel.png" width="30">
                                         </div>
                                         <div class="product-help-desc">
                                             <span class="product-step-heading">Step 2</span>
@@ -303,8 +301,7 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
                                     </div>
                                     <div class="product-step">
                                         <div class="product-help-circle">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ticket.png"
-                                                width="30">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ticket.png" width="30">
                                         </div>
                                         <div class="product-help-desc">
                                             <span class="product-step-heading">Step 3</span>
@@ -313,8 +310,7 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
                                     </div>
                                     <div class="product-step">
                                         <div class="product-help-circle">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/coconuttree.png"
-                                                width="30">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/coconuttree.png" width="30">
                                         </div>
                                         <div class="product-help-desc">
                                             <span class="product-step-heading">Step 4</span>
@@ -324,26 +320,23 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
                                     </div>
                                 </div>
                             </div>
-                            <div class="image-1">
-                                <img src="/12.png" />
-                            </div>
+
 
                             <div class="image-2">
                                 <h2>Included In your Experience</h2>
-                                <img src="/west.png" width="600" />
+                                <img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/sportsexperience.jpg">
                             </div>
 
                             <div class="concert-details">
                                 <div class="concert-title">Included in Your Experience</div>
                                 <div class="concert">
-                                    <img src="/edsheeran.png" />
+                                <img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/securearea.jpg" width="600">
                                     <h4 class="eminem">Secure Your <br />Own Area</h4>
                                 </div>
 
                                 <div class="concert">
                                     <h4 class="eminem">F1 Track Access</h4>
-                                    <img src="/drinking and enjoying.png" />
-
+                                    <img class="icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/f1trackaccess.jpg" width="600">
                                 </div>
                             </div>
 
@@ -392,7 +385,7 @@ if ('product' === get_post_type() && has_term('f1', 'product_cat', $post)):
                                                 you in
                                                 finding the best solution for your needs.</p>
                                             <p><strong>Mon - Fri: 9:00 AM - 5:00 PM PST</strong><br>+1 123 456 7890</p>
-                                            <button class="callback-btn">CALL ME BACK</button>
+                                            <button type="button" class="callback-btn">CALL ME BACK</button>
                                         </div>
                                     </div>
                                     <button type="submit">Submit</button>
